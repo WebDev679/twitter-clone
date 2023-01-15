@@ -7,7 +7,7 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 
-const db = monk(process.env.MONGO_URI);
+const db = monk("mongodb+srv://arnavpc:1Tw9ZBbUzXgo7bIU@cluster0.tfhewar.mongodb.net/meowers?retryWrites=true&w=majority");
 const mews = db.get("mews");
 const filter = new Filter();
 
