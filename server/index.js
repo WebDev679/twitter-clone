@@ -7,7 +7,7 @@ const rateLimit = require("express-rate-limit");
 
 const app = express();
 
-const db = monk("127.0.0.1:27017/meower");
+const db = monk(process.env.MONGO_URI || "127.0.0.1:27017/meower");
 const mews = db.get("mews");
 const filter = new Filter();
 
