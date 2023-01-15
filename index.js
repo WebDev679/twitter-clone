@@ -36,12 +36,6 @@ app.get("/mews", (req, res) => {
   });
 });
 
-app.use(rateLimit({
-  windowMs: 30 * 1000, 
-  max: 1
-}))
-
-
 app.post("/mews", (req, res) => {
   if (isValidMew(req.body)) {
     const mew = {
